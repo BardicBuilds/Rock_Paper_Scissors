@@ -14,7 +14,7 @@ const getUserChoice = userInput => {
 };
 
 function getComputerChoice() {
-  randomNumber = Math.floor(Math.random() * 3)
+  let randomNumber = Math.floor(Math.random() * 3)
   switch (randomNumber){
     case 0:
       return 'rock';
@@ -22,15 +22,15 @@ function getComputerChoice() {
       return 'paper';
     case 2:
       return 'scissors';
-  }  
+  }
 }
 
 
 let determineWinner = (userChoice, computerChoice) => {
   if (userChoice === computerChoice){
      return 'It\'s a tie!';
-  } 
-  if (userChoice === 'rock'){ 
+  }
+  if (userChoice === 'rock'){
     if(computerChoice === 'paper'){
       computerTotal += 1
       return'Paper beats rock. The computer won :p';
@@ -38,7 +38,7 @@ let determineWinner = (userChoice, computerChoice) => {
       playerTotal +=1
       return 'Rock crushes scissors. You win!';
       }
-    } 
+    }
   if (userChoice === 'paper'){
     if(computerChoice === 'scissors'){
       computerTotal += 1
@@ -64,7 +64,7 @@ function playGame(){
   const computerChoice = getComputerChoice();
   console.log(`The player chooses ${userChoice}.`);
   console.log(`The computer chooses ${computerChoice}.`);
-  console.log(determineWinner(userChoice, computerChoice)); 
+  console.log(determineWinner(userChoice, computerChoice));
 
 };
 
